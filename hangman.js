@@ -1,4 +1,28 @@
 var POSSIBLE_WORDS= ["obdurate","verisimilitude","defenestrate","obsequious","dissonant","toady","idempotent"];
 
-var randomIndex = parseInt(Math.random()*POSSIBLE_WORDS.length);
-var word = POSSIBLE_WORDS[randomIndex]
+
+var word = "";
+
+function newGame() {
+    var randomIndex = parseInt(Math.random() * POSSIBLE_WORDS.length);
+    word = POSSIBLE_WORDS[randomIndex];
+
+    var clueString = "";
+    for (var i = 0 ; i < word.length; i++)
+    {
+        clueString += "_ ";
+    }
+
+    var clue = document.getElementById("Clue");
+    clue.innerHTML = clueString;
+
+    function guess(){
+        updatePage();
+    }
+
+    function updatePage(){
+        
+    }
+
+}
+
