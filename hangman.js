@@ -2,14 +2,30 @@ var POSSIBLE_WORDS= ["obdurate","verisimilitude","defenestrate","obsequious","di
 
 
 var word = "";
+var guesses = "";
 
 function newGame() {
     var randomIndex = parseInt(Math.random() * POSSIBLE_WORDS.length);
     word = POSSIBLE_WORDS[randomIndex];
+    guesses = "";
+    updatePage();
+}
+
+function guessLetter(){
+    var input = document.getElementById("guess");
+    var letter = input.value;
+    guesses += letter;
+    updatePage();
+
+}
+
+function updatePage(){
 
     var clueString = "";
     for (var i = 0 ; i < word.length; i++)
     {
+        
+
         clueString += "_ ";
     }
 
@@ -21,7 +37,7 @@ function newGame() {
     }
 
     function updatePage(){
-        
+
     }
 
 }
