@@ -8,6 +8,7 @@ var POSSIBLE_WORDS =["obduraate", "verismilitude", "defenestrate",
 function newGame(){
      var randomIndex = parseInt(Math.random() * POSSIBLE_WORDS.length);
      word = POSSIBLE_WORDS[randomIndex];
+     console.log('Word chosen was: ${word}')
     guesses = " ";
     guess_count = MAX_GUESSES;
     updatePage();
@@ -24,6 +25,7 @@ function guessLetter(){
     updatePage();
 } 
 function updatePage(){
+    console.log("updated called");
      var clueString = "";
      for(var i = 0; i <word.length; i++){
         var currentLetter = word.charAt(i);
