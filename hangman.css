@@ -11,3 +11,7 @@ body{
     margin-top: 2em;
 }
 
+#result{
+    font-size: larger;
+    font-style: bold;
+}

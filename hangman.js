@@ -64,7 +64,8 @@ function updatePage(){
     }
     else if (clueString.indexOf("_") < 0 ) {
         gameOver = true;
-        alert("Congratulations! You guessed the correct word: "+ word);
+        var result = document.getElementById("result");
+        result.innerHTML = "Congratulations! You guessed the correct word: "+ word;
     }
 
     //update clue string
