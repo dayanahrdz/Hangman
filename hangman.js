@@ -14,7 +14,7 @@ function newGame(){
     gameOver = false;
     updatePage();
 }
-
+//alerts user the game is over
 function guessLetter(){
 
     if (gameOver){
@@ -24,7 +24,13 @@ function guessLetter(){
     
     var input = document.getElementById("guess");
     var letter = input.value;
-    
+
+//preventing guesses before word is chosen
+if (word === ""){
+    alert("Please click 'New Game' first");
+    return;
+}
+
 //no guessing same letter 2x
     if(guesses.indexOf(letter)>= 0) {
         alert("Letter already guessed, Try again.");
