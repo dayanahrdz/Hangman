@@ -33,6 +33,7 @@ if (word === ""){
 
 //no guessing same letter 2x
     if(guesses.indexOf(letter)>= 0) {
+        input.value = "";
         alert("Letter already guessed, Try again.");
         return;
     }
